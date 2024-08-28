@@ -22,16 +22,15 @@
   > - Preprocessing modifies the source code file to expand external functions and abbreviations like `#include <package>`
   > - Linking:
   >     According to R. Martinho Fernandes from Stack Overflow: 
-  > ```
-  > The linker is what produces the final compilation output from the object files the compiler produced. This output can be either a shared (or dynamic) library (and while the name is similar, they haven't got much in common with static libraries mentioned earlier) or an executable. It links all the object files by replacing the references to undefined symbols with the correct addresses. Each of these symbols can be defined in other object files or in libraries. If they are defined in libraries other than the standard library, you need to tell the linker about them.
-  > ```
+  > > The linker is what produces the final compilation output from the object files the compiler produced. This output can be either a shared (or dynamic) library (and while the name is similar, they haven't got much in common with static libraries mentioned earlier) or an executable. It links all the object files by replacing the references to undefined symbols with the correct addresses. Each of these symbols can be defined in other object files or in libraries. If they are defined in libraries other than the standard library, you need to tell the linker about them.
   >   ... which is quite a mouthful, so let's dissect that snippet of an explanation.
   >   So basically, builtin functions like `printf("deez nuts")` are part of a library that exists as an object file, which contains executable machine code
   2. What is the difference between a relocatable object program and an executable object program?
   3. Make a comparative table between each phase of the compilation system
-   | Preprocessing | Compiling | Assembling | Linking |
-   |---------------|-----------|------------|---------|
-   | It only transforms a text file into another text file | It also transforms an expanded text file into a text file that contains Assembly code | It "compiles" (i.e. assembles) the file produced by compiling | It retrieves the functions that have not been "translated" by the compiler |
+
+   > | Preprocessing | Compiling | Assembling | Linking |
+   > |---------------|-----------|------------|---------|
+   > | It only transforms a text file into another text file  | It also transforms an expanded text file into a text file that contains Assembly code | It assembles the file that the compiler produced | It retrieves the functions that have not been "translated" by the compile|
 
 ## 1.3
 5. Describe the `switch` statement in the C Programming language and its' differences to the `if-else` statement.
